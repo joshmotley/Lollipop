@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		260580891B75B92E008DBF28 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 260580881B75B92E008DBF28 /* main.m */; };
 		2605808C1B75B92E008DBF28 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2605808B1B75B92E008DBF28 /* AppDelegate.m */; };
-		2605808F1B75B92E008DBF28 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2605808E1B75B92E008DBF28 /* ViewController.m */; };
 		260580921B75B92E008DBF28 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 260580901B75B92E008DBF28 /* Main.storyboard */; };
 		260580941B75B92E008DBF28 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 260580931B75B92E008DBF28 /* Images.xcassets */; };
 		260580971B75B92E008DBF28 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 260580951B75B92E008DBF28 /* LaunchScreen.xib */; };
@@ -20,6 +19,7 @@
 		260580B51B768698008DBF28 /* camera@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 260580AF1B768698008DBF28 /* camera@2x.png */; };
 		260580B61B768698008DBF28 /* friends@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 260580B01B768698008DBF28 /* friends@2x.png */; };
 		260580B71B768698008DBF28 /* inbox@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 260580B11B768698008DBF28 /* inbox@2x.png */; };
+		26705BEE1B781F03005EBEEE /* InboxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26705BED1B781F03005EBEEE /* InboxViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,8 +38,6 @@
 		260580881B75B92E008DBF28 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2605808A1B75B92E008DBF28 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2605808B1B75B92E008DBF28 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		2605808D1B75B92E008DBF28 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		2605808E1B75B92E008DBF28 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		260580911B75B92E008DBF28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		260580931B75B92E008DBF28 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		260580961B75B92E008DBF28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -52,6 +50,8 @@
 		260580AF1B768698008DBF28 /* camera@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "camera@2x.png"; path = "../camera@2x.png"; sourceTree = "<group>"; };
 		260580B01B768698008DBF28 /* friends@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "friends@2x.png"; path = "../friends@2x.png"; sourceTree = "<group>"; };
 		260580B11B768698008DBF28 /* inbox@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "inbox@2x.png"; path = "../inbox@2x.png"; sourceTree = "<group>"; };
+		26705BEC1B781F03005EBEEE /* InboxViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InboxViewController.h; sourceTree = "<group>"; };
+		26705BED1B781F03005EBEEE /* InboxViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InboxViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,8 +96,8 @@
 				260580B81B768707008DBF28 /* Images */,
 				2605808A1B75B92E008DBF28 /* AppDelegate.h */,
 				2605808B1B75B92E008DBF28 /* AppDelegate.m */,
-				2605808D1B75B92E008DBF28 /* ViewController.h */,
-				2605808E1B75B92E008DBF28 /* ViewController.m */,
+				26705BEC1B781F03005EBEEE /* InboxViewController.h */,
+				26705BED1B781F03005EBEEE /* InboxViewController.m */,
 				260580901B75B92E008DBF28 /* Main.storyboard */,
 				260580931B75B92E008DBF28 /* Images.xcassets */,
 				260580951B75B92E008DBF28 /* LaunchScreen.xib */,
@@ -251,9 +251,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2605808F1B75B92E008DBF28 /* ViewController.m in Sources */,
 				2605808C1B75B92E008DBF28 /* AppDelegate.m in Sources */,
 				260580891B75B92E008DBF28 /* main.m in Sources */,
+				26705BEE1B781F03005EBEEE /* InboxViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,6 +448,7 @@
 				260580A81B75B92E008DBF28 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		260580A91B75B92E008DBF28 /* Build configuration list for PBXNativeTarget "RibbitTests" */ = {
 			isa = XCConfigurationList;
@@ -456,6 +457,7 @@
 				260580AB1B75B92E008DBF28 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
