@@ -27,7 +27,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Lollipop" id="ODh-iV-bmi"/>
                     <connections>
-                        <segue destination="szX-oj-wu1" kind="show" identifier="showLogin" id="z2q-2K-lBk"/>
+                        <segue destination="szX-oj-wu1" kind="show" identifier="showLogin" id="O5n-6p-z0v"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Ht-n5-Tjx" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -37,7 +37,7 @@
         <!--Lollipop-->
         <scene sceneID="Yyk-mR-UMV">
             <objects>
-                <viewController id="szX-oj-wu1" sceneMemberID="viewController">
+                <viewController id="szX-oj-wu1" customClass="LoginViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="yMz-rF-oRd"/>
                         <viewControllerLayoutGuide type="bottom" id="FG5-EH-WYJ"/>
@@ -68,29 +68,28 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sign Up!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eHm-NW-gnH">
-                                <rect key="frame" x="365" y="258" width="67" height="21"/>
-                                <gestureRecognizers/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xsy-UD-ixh">
+                                <rect key="frame" x="16" y="254" width="59" height="30"/>
+                                <state key="normal" title="Sign Up!">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="psJ-qa-Oc1" appends="YES" id="J11-rh-mUq"/>
+                                    <segue destination="8Xg-TA-FXo" kind="show" identifier="showSignUpPage" id="VAh-pt-YLl"/>
                                 </connections>
-                            </label>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="XSb-gJ-ebo" appends="YES" id="DpY-nD-b1b"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Lollipop" id="8Gx-Ec-xzC"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mzs-50-1nC" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="psJ-qa-Oc1">
-                    <connections>
-                        <segue destination="8Xg-TA-FXo" kind="show" id="yEV-XO-f8B"/>
-                    </connections>
-                </tapGestureRecognizer>
+                <tapGestureRecognizer id="XSb-gJ-ebo"/>
             </objects>
-            <point key="canvasLocation" x="1270" y="-172"/>
+            <point key="canvasLocation" x="1286" y="-188"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="G3L-bb-4c4">
@@ -166,10 +165,10 @@
             </objects>
             <point key="canvasLocation" x="-876" y="454"/>
         </scene>
-        <!--Lollipop-->
+        <!--Sign Up-->
         <scene sceneID="F1P-rF-dEL">
             <objects>
-                <viewController id="8Xg-TA-FXo" sceneMemberID="viewController">
+                <viewController id="8Xg-TA-FXo" userLabel="Sign Up" customClass="SignupViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Q6T-j4-9js"/>
                         <viewControllerLayoutGuide type="bottom" id="luu-Ue-0GZ"/>
@@ -178,11 +177,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mTo-kD-kex">
-                                <rect key="frame" x="16" y="109" width="568" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rLN-cM-n98">
                                 <rect key="frame" x="16" y="158" width="568" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -193,16 +187,30 @@
                                 <state key="normal" title="Sign Up">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="signup:" destination="8Xg-TA-FXo" eventType="touchUpInside" id="BM1-Gr-7YF"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Address" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GsG-6I-vcT">
                                 <rect key="frame" x="16" y="206" width="568" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                             </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mTo-kD-kex">
+                                <rect key="frame" x="16" y="109" width="568" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Lollipop" id="iEU-GD-z9l"/>
+                    <connections>
+                        <outlet property="emailField" destination="GsG-6I-vcT" id="Jo5-Vq-QJy"/>
+                        <outlet property="passwordField" destination="rLN-cM-n98" id="NAb-s8-2Zo"/>
+                        <outlet property="signup" destination="sTM-lN-v6v" id="ULM-Wr-3Cm"/>
+                        <outlet property="usernameField" destination="mTo-kD-kex" id="cAe-NV-SEJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aCg-cL-xBU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -264,6 +272,23 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wvH-6d-y63" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-136" y="1252"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="6t4-LI-qJu">
+            <objects>
+                <viewController id="6eO-Rt-zQD" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PvH-Zx-GDR"/>
+                        <viewControllerLayoutGuide type="bottom" id="pFM-7F-0Xt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4Fz-qs-9Nq">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8NN-gR-spZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
         </scene>
     </scenes>
     <resources>

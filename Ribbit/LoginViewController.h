@@ -1,5 +1,5 @@
 //
-//  UIViewController+LoginViewController.h
+//  LoginViewController.h
 //  Ribbit
 //
 //  Created by Joshua Motley on 8/10/15.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIViewController (LoginViewController)
+@interface LoginViewController : UIViewController
 
 @end

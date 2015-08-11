@@ -1,5 +1,5 @@
 //
-//  UIViewController+LoginViewController.m
+//  LoginViewController.m
 //  Ribbit
 //
 //  Created by Joshua Motley on 8/10/15.
@@ -8,6 +8,6 @@
 
 #import "LoginViewController.h"
 
-@implementation UIViewController (LoginViewController)
+@implementation LoginViewController
 
 @end
