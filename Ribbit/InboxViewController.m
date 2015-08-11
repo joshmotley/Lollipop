@@ -8,6 +8,7 @@
 
 #import "InboxViewController.h"
 #import <Parse/Parse.h>
+#import "LoginViewController.h"
 
 @interface InboxViewController ()
 
@@ -18,10 +19,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-
+    PFUser *currentUser = [PFUser currentUser];
     
-    [self performSegueWithIdentifier:@"showLogin" sender:self];
+    if(currentUser){
+        NSLog(@"Current User: %@", currentUser);
+    }else{
     
+        [self performSegueWithIdentifier:@"showLogin" sender:self];}
     
   
 }
@@ -58,4 +62,15 @@
 }
 */
 
+- (IBAction)logout:(id)sender {
+    [PFUser logOut];
+    PFUser *currentUser = [PFUser currentUser];
+    [self performSegueWithIdentifier:@"showLogin" sender:self];
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if([segue.identifier isEqualToString:@"showLogin"]){
+        [segue.destinationViewController setHidesBottomBarWhenPushed:YES];
+    }
+}
 @end

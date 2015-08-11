@@ -25,14 +25,21 @@
                             <outlet property="delegate" destination="1pX-fk-YKU" id="cUJ-LR-f1S"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Lollipop" id="ODh-iV-bmi"/>
+                    <navigationItem key="navigationItem" title="Lollipop" id="ODh-iV-bmi">
+                        <barButtonItem key="backBarButtonItem" title=" " id="v8c-sJ-5Px"/>
+                        <barButtonItem key="rightBarButtonItem" title="Log out" id="g0c-NF-o5e">
+                            <connections>
+                                <action selector="logout:" destination="1pX-fk-YKU" id="unc-cb-lvS"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="szX-oj-wu1" kind="show" identifier="showLogin" id="O5n-6p-z0v"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Ht-n5-Tjx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="546" y="-172"/>
+            <point key="canvasLocation" x="582" y="-188"/>
         </scene>
         <!--Lollipop-->
         <scene sceneID="Yyk-mR-UMV">
@@ -61,6 +68,9 @@
                                 <state key="normal" title="Log In">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="login:" destination="szX-oj-wu1" eventType="touchUpInside" id="NsK-Om-26d"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Don't have an account?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XEf-kD-qJu">
                                 <rect key="frame" x="123" y="258" width="189" height="21"/>
@@ -85,6 +95,10 @@
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Lollipop" id="8Gx-Ec-xzC"/>
+                    <connections>
+                        <outlet property="passwordLoginField" destination="sE2-YJ-Ti0" id="XBz-d6-SrB"/>
+                        <outlet property="usernameLoginField" destination="p5h-ru-5je" id="56U-y1-CaF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mzs-50-1nC" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="XSb-gJ-ebo"/>
@@ -272,23 +286,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wvH-6d-y63" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-136" y="1252"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="6t4-LI-qJu">
-            <objects>
-                <viewController id="6eO-Rt-zQD" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="PvH-Zx-GDR"/>
-                        <viewControllerLayoutGuide type="bottom" id="pFM-7F-0Xt"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="4Fz-qs-9Nq">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8NN-gR-spZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
         </scene>
     </scenes>
     <resources>

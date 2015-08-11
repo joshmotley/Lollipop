@@ -14,7 +14,7 @@
 -(void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    self.navigationItem.hidesBackButton = NO;
     
 }
 
@@ -43,6 +43,8 @@
                 
             }
         }];
+        
+        //more sequential code to be run right away while background code is being run
         
     }
 
