@@ -39,7 +39,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Ht-n5-Tjx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="582" y="-188"/>
+            <point key="canvasLocation" x="500" y="-228"/>
         </scene>
         <!--Lollipop-->
         <scene sceneID="Yyk-mR-UMV">
@@ -105,7 +105,34 @@
             </objects>
             <point key="canvasLocation" x="1286" y="-188"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Edit Friends-->
+        <scene sceneID="CIZ-XI-Had">
+            <objects>
+                <tableViewController id="F89-KA-pX0" customClass="EditFriendsViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Wz6-dX-zkH">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="XVZ-KW-xiY">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XVZ-KW-xiY" id="q5E-bL-F2g">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="F89-KA-pX0" id="Bmw-y5-bfs"/>
+                            <outlet property="delegate" destination="F89-KA-pX0" id="n9q-aL-LtC"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Edit Friends" id="Dww-IH-PKh"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sAy-Qi-SPn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1298" y="485"/>
+        </scene>
+        <!--Friends-->
         <scene sceneID="G3L-bb-4c4">
             <objects>
                 <tableViewController id="6Xg-Wt-5QO" sceneMemberID="viewController">
@@ -126,7 +153,13 @@
                             <outlet property="delegate" destination="6Xg-Wt-5QO" id="SDz-nd-a2I"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="x4k-Yb-J3U"/>
+                    <navigationItem key="navigationItem" title="Friends" id="x4k-Yb-J3U">
+                        <barButtonItem key="rightBarButtonItem" title="Edit" id="ckg-xY-Mjl">
+                            <connections>
+                                <segue destination="F89-KA-pX0" kind="show" id="KMA-IF-sHI"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8aZ-O3-3FV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

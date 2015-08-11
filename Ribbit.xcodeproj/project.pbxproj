@@ -19,6 +19,7 @@
 		260580B51B768698008DBF28 /* camera@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 260580AF1B768698008DBF28 /* camera@2x.png */; };
 		260580B61B768698008DBF28 /* friends@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 260580B01B768698008DBF28 /* friends@2x.png */; };
 		260580B71B768698008DBF28 /* inbox@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 260580B11B768698008DBF28 /* inbox@2x.png */; };
+		260606331B79BC2D0001B170 /* EditFriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 260606321B79BC2D0001B170 /* EditFriendsViewController.m */; };
 		26705BEE1B781F03005EBEEE /* InboxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26705BED1B781F03005EBEEE /* InboxViewController.m */; };
 		26705BF01B797AFE005EBEEE /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26705BEF1B797AFD005EBEEE /* Parse.framework */; };
 		26705BFB1B797C3A005EBEEE /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26705BF11B797C3A005EBEEE /* AudioToolbox.framework */; };
@@ -65,6 +66,8 @@
 		260580AF1B768698008DBF28 /* camera@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "camera@2x.png"; path = "../camera@2x.png"; sourceTree = "<group>"; };
 		260580B01B768698008DBF28 /* friends@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "friends@2x.png"; path = "../friends@2x.png"; sourceTree = "<group>"; };
 		260580B11B768698008DBF28 /* inbox@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "inbox@2x.png"; path = "../inbox@2x.png"; sourceTree = "<group>"; };
+		260606311B79BC2D0001B170 /* EditFriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditFriendsViewController.h; sourceTree = "<group>"; };
+		260606321B79BC2D0001B170 /* EditFriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditFriendsViewController.m; sourceTree = "<group>"; };
 		26705BEC1B781F03005EBEEE /* InboxViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InboxViewController.h; sourceTree = "<group>"; };
 		26705BED1B781F03005EBEEE /* InboxViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InboxViewController.m; sourceTree = "<group>"; };
 		26705BEF1B797AFD005EBEEE /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
@@ -146,6 +149,8 @@
 				26705C111B798285005EBEEE /* SignupViewController.m */,
 				26705C161B799111005EBEEE /* LoginViewController.h */,
 				26705C171B799111005EBEEE /* LoginViewController.m */,
+				260606311B79BC2D0001B170 /* EditFriendsViewController.h */,
+				260606321B79BC2D0001B170 /* EditFriendsViewController.m */,
 				260580901B75B92E008DBF28 /* Main.storyboard */,
 				260580931B75B92E008DBF28 /* Images.xcassets */,
 				260580951B75B92E008DBF28 /* LaunchScreen.xib */,
@@ -317,6 +322,7 @@
 				260580891B75B92E008DBF28 /* main.m in Sources */,
 				26705BEE1B781F03005EBEEE /* InboxViewController.m in Sources */,
 				26705C121B798285005EBEEE /* SignupViewController.m in Sources */,
+				260606331B79BC2D0001B170 /* EditFriendsViewController.m in Sources */,
 				26705C181B799111005EBEEE /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
