@@ -61,14 +61,22 @@
     PFUser *user = [self.allUsers objectAtIndex:indexPath.row];
     cell.textLabel.text = user.username;
     
-  
+    if([self isFriend:user]){
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+        
+    }else{
+        cell.accessoryType = UITableViewCellAccessoryNone;
+        
+    }
     
     return cell;
 }
 
+#pragma mark - Table view delegate
+
 -(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    [self.tableView deselectRowAtIndexPath:indexPath animated:NO];
+    
     
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     cell.accessoryType = UITableViewCellAccessoryCheckmark;
@@ -80,18 +88,22 @@
             NSLog(@"Error: %@ %@", error, [error userInfo]);
         }
         }];
+    [self.tableView deselectRowAtIndexPath:indexPath animated:NO];
     
 }
 
+#pragma mark - Helper methods
 
-/*
-#pragma mark - Navigation
+-(BOOL)isFriend:(PFUser *)user{
+    
+    for(PFUser *friend in self.friends){
+        if([friend.objectId isEqualToString:user.objectId]){
+            return YES;
+        }
+    }
+    return NO;}
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+
+
 
 @end

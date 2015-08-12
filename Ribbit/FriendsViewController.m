@@ -7,6 +7,7 @@
 //
 
 #import "FriendsViewController.h"
+#import "EditFriendsViewController.h"
 
 @interface FriendsViewController ()
 
@@ -30,6 +31,18 @@
     }];
     
   
+}
+
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if([segue.identifier isEqualToString:@"showEditFriends"]){
+        EditFriendsViewController *viewController = (EditFriendsViewController *)segue.destinationViewController;
+      
+        viewController.friends = [NSMutableArray arrayWithArray:self.friends];
+        
+        
+    }
+    
 }
 
 
@@ -57,6 +70,8 @@
     
     return cell;
 }
+
+
 
 
 @end
