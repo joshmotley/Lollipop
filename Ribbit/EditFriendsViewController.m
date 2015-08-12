@@ -74,21 +74,51 @@
 
 #pragma mark - Table view delegate
 
--(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath{
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
+    PFUser *user = [self.allUsers objectAtIndex:indexPath.row];
+    PFRelation *friendsRelation = [self.currentUser relationForKey:@"friendsRelation"];
     
+   
     
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-    cell.accessoryType = UITableViewCellAccessoryCheckmark;
-    PFRelation *friendsRelation = [self.currentUser relationForKey:@"friendsRelation"];
-    PFUser *user = [self.allUsers objectAtIndex:indexPath.row];
-    [friendsRelation addObject:user];
+    
+    
+    if([self isFriend:[self.allUsers objectAtIndex:indexPath.row]]){
+        
+    //Remove Checkmark
+        
+        cell.accessoryType = UITableViewCellAccessoryNone;
+    
+    // Remove from friends array
+        
+        for(PFUser *friend in self.friends){
+            if([friend.objectId isEqualToString:user.objectId]){
+                [self.friends removeObject:friend];
+                break;
+            }
+        }
+    // Remove friend from backend
+        
+        [friendsRelation removeObject:user];
+        }
+    else
+    {
+    // Add friend if not already friend
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+        [self.friends addObject:user];
+        [friendsRelation addObject:user];
+        
+    }
+    
     [self.currentUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error){
         if (error) {
             NSLog(@"Error: %@ %@", error, [error userInfo]);
         }
-        }];
-    [self.tableView deselectRowAtIndexPath:indexPath animated:NO];
+    }];
+    
+    
+   
     
 }
 

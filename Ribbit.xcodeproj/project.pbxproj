@@ -21,6 +21,7 @@
 		260580B71B768698008DBF28 /* inbox@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 260580B11B768698008DBF28 /* inbox@2x.png */; };
 		260606331B79BC2D0001B170 /* EditFriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 260606321B79BC2D0001B170 /* EditFriendsViewController.m */; };
 		260606361B7A996A0001B170 /* FriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 260606351B7A996A0001B170 /* FriendsViewController.m */; };
+		260606391B7B9EEF0001B170 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 260606381B7B9EEF0001B170 /* CameraViewController.m */; };
 		26705BEE1B781F03005EBEEE /* InboxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26705BED1B781F03005EBEEE /* InboxViewController.m */; };
 		26705BF01B797AFE005EBEEE /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26705BEF1B797AFD005EBEEE /* Parse.framework */; };
 		26705BFB1B797C3A005EBEEE /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26705BF11B797C3A005EBEEE /* AudioToolbox.framework */; };
@@ -71,6 +72,8 @@
 		260606321B79BC2D0001B170 /* EditFriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditFriendsViewController.m; sourceTree = "<group>"; };
 		260606341B7A996A0001B170 /* FriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsViewController.h; sourceTree = "<group>"; };
 		260606351B7A996A0001B170 /* FriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsViewController.m; sourceTree = "<group>"; };
+		260606371B7B9EEF0001B170 /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
+		260606381B7B9EEF0001B170 /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
 		26705BEC1B781F03005EBEEE /* InboxViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InboxViewController.h; sourceTree = "<group>"; };
 		26705BED1B781F03005EBEEE /* InboxViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InboxViewController.m; sourceTree = "<group>"; };
 		26705BEF1B797AFD005EBEEE /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
@@ -156,6 +159,8 @@
 				260606321B79BC2D0001B170 /* EditFriendsViewController.m */,
 				260606341B7A996A0001B170 /* FriendsViewController.h */,
 				260606351B7A996A0001B170 /* FriendsViewController.m */,
+				260606371B7B9EEF0001B170 /* CameraViewController.h */,
+				260606381B7B9EEF0001B170 /* CameraViewController.m */,
 				260580901B75B92E008DBF28 /* Main.storyboard */,
 				260580931B75B92E008DBF28 /* Images.xcassets */,
 				260580951B75B92E008DBF28 /* LaunchScreen.xib */,
@@ -324,6 +329,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2605808C1B75B92E008DBF28 /* AppDelegate.m in Sources */,
+				260606391B7B9EEF0001B170 /* CameraViewController.m in Sources */,
 				260580891B75B92E008DBF28 /* main.m in Sources */,
 				260606361B7A996A0001B170 /* FriendsViewController.m in Sources */,
 				26705BEE1B781F03005EBEEE /* InboxViewController.m in Sources */,
