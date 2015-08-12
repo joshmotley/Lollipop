@@ -7,6 +7,7 @@
 //
 
 #import "EditFriendsViewController.h"
+#import "FriendsViewController.h"
 
 
 @interface EditFriendsViewController ()
@@ -60,7 +61,7 @@
     PFUser *user = [self.allUsers objectAtIndex:indexPath.row];
     cell.textLabel.text = user.username;
     
-    
+  
     
     return cell;
 }
